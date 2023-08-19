@@ -6,10 +6,10 @@ export default function buildDevServer(options: BuildOptions): DevServerConfigur
     port: options.port,
     open: true,
     historyApiFallback: true,
-    hot: true,
-    static: {
-      watch: true,
-      directory: './src/*'
-    }
+    // hot: true,
+    // static: {
+    //   watch: true,
+    //   directory: './src/*'
+    // }
   };
 }

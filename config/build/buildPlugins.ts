@@ -7,7 +7,6 @@ import { BuildOptions } from './types/config';
 import globule from 'globule';
 
 const pagePaths = globule.find(['src/pug/pages/**/*.pug']);
-console.log(pagePaths);
 
 export default function buildPlugins({ paths, isDev }: BuildOptions):
   webpack.WebpackPluginInstance[] {
@@ -26,11 +25,11 @@ export default function buildPlugins({ paths, isDev }: BuildOptions):
     }),
   ];
 
-  if (isDev) {
-    plugins.push(
-      new webpack.HotModuleReplacementPlugin(),
-    );
-  }
+  // if (isDev) {
+  //   plugins.push(
+  //     new webpack.HotModuleReplacementPlugin(),
+  //   );
+  // }
 
   return plugins;
 }
