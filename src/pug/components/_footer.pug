@@ -1,0 +1,23 @@
+-
+  var navList = [
+    {link: '#', label: 'Пользовательское соглашение'},
+    {link: '#', label: 'Контакты'},
+    {link: '#', label: 'Частые вопросы'},
+  ]
+
+  var socialList = [
+    {link: '#', label: 'instagram', icon: 'icon-inst-grey.svg'},
+    {link: '#', label: 'discrod', icon: 'icon-discord-grey.svg'},
+    {link: '#', label: 'vk', icon: 'icon-vk-grey.svg'},
+    {link: '#', label: 'youtube', icon: 'icon-yt-grey.svg'},
+  ]
+
+footer.footer(class="flex justify-between items-center flex-wrap gap-8 text-sm py-10 px-20 3xl:px-10 2md:flex-col 2md:p-5 2md:gap-4 2md:text-center")
+  .footer-copy(class="max-w-sm 2md:max-w-none 2md:order-1 2md:text-xs ") 1paid.ru — Маркетплейс по продажам цифровых товаров. © 2023, Все права защищены.
+  .footer-list(class="flex flex-wrap gap-x-8 gap-y-2.5 2md:flex-col")
+    each item in navList
+      a(href= item.link class="hover:text-white duration-200")= item.label
+  .footer-soc(class="flex gap-5 2md:flex-wrap 2md:justify-center")
+    each item in socialList
+      a(href= item.link class="shrink-0 leading-none duration-200")
+        +image(item.icon, 'footer-soc-icon' , item.label)
