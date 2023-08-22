@@ -13,8 +13,8 @@ html(lang="ru")
 
   body(class=bodyNoScroll && 'overflow-y-hidden')
     #root
-      .page-wrapper(class=pageModificator)
-        .page-grid
-
+      .layout(class=pageModificator)
+        .layout-grid
+          include ../components/_context-menu.pug
         include ../components/_footer.pug
       block portals
