@@ -8,9 +8,5 @@ export default function buildResolvers(options: BuildOptions): ResolveOptions {
     preferAbsolute: true,
     modules: [options.paths.src, 'node_modules'],
     mainFiles: ['index'],
-    alias: {
-      "@Images": path.join(options.paths.src, 'assets', 'images'),
-      "@Fonts": path.join(options.paths.src, 'assets', 'fonts')
-    },
   };
 }
