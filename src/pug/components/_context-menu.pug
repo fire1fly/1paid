@@ -1,3 +1,12 @@
 .cm
-  .cm-h
-  h1 sdfsdf fdfdf df выа
+  .cm-inner
+    .cm-h(class="px-10 pt-8")
+      .cm-logo
+        +image('dots-1.svg', 'cm-logo__dots', '1paid.ru')
+        +image('logo.svg', 'cm-logo-pic', '1paid.ru')
+    .cm-b(class="py-10")
+      .cm-b-inner
+        include ../components/_total-site-card
+        .cm-nav(class="mt-10")
+          include ../components/_nav-pinned
+    .cm-f(class="pb-10") footer
