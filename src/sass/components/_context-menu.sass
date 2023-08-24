@@ -3,6 +3,9 @@
     height: 100%
     display: flex
     flex-direction: column
+  &-container
+    margin-left: 40px
+    margin-right: 40px
   &-h
     flex: 0 0 auto
     height: 150px
@@ -10,6 +13,8 @@
     background-size: cover
   &-logo
     position: relative
+    width: 180px
+    // height: 70px
     &__dots
       position: absolute
       left: 0
@@ -18,11 +23,17 @@
     &-pic
       position: relative
       z-index: 2
-      width: 50%
+      width: 100%
+  &-close
+    &-item
+      transition: 0.2s
+    &:hover
+      .cm-close-item
+        &:nth-of-type(1)
+          transform: rotate(45deg) translate(6px, 6px)
+        &:nth-of-type(2)
+          transform: rotate(-45deg) translate(6px, -7px)
   &-b
     flex: 1 1 auto
-    &-inner
-      margin-left: 40px
-      margin-right: 40px
   &-f
     flex: 0 0 auto
