@@ -19,7 +19,7 @@ export default function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
     test: /\.(png|jpe?g|svg|gif|ico)$/i,
     type: 'asset/resource',
     generator: {
-      filename: 'assets/images/[name].[hash:8][ext]'
+      filename: 'assets/images/[name].[hash:8][ext][query]'
     },
   };
   const fontsLoader = {
@@ -59,9 +59,9 @@ export default function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
 
   return [
     htmlLoader,
+    pugLoader,
     imagesLoader,
     fontsLoader,
-    pugLoader,
     babelLoader,
     typescriptLoader,
     cssLoader,

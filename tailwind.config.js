@@ -18,6 +18,12 @@ module.exports = {
       },
       spacing: {
         '15': '3.75rem'
+      },
+      fontFamily: {
+        "primary-bold": ['TTNorms Bold', 'system-ui, -apple-system, BlinkMacSystemFont, sans-serif'],
+        "primary-med": ['TTNorms Medium', 'system-ui, -apple-system, BlinkMacSystemFont, sans-serif'],
+        "secondary-bold": ['Acrom Bold', 'system-ui, -apple-system, BlinkMacSystemFont, sans-serif'],
+        "secondary-med": ['Acrom Medium', 'system-ui, -apple-system, BlinkMacSystemFont, sans-serif'],
       }
     },
   },
