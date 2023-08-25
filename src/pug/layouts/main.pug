@@ -15,6 +15,16 @@ html(lang="ru")
     #root
       .layout(class=pageModificator)
         .layout-grid
-          include ../components/_context-menu.pug
+          .layout-sidebar
+            include ../components/_context-menu.pug
+          .layout-page
+            .layout-lf
+              include ../components/_live-feed.pug
+            .layout-h
+              include ../components/_header.pug
+            .layout-b
+              .p(class="h-[2000px]")
+              block page
+
         include ../components/_footer.pug
       block portals
