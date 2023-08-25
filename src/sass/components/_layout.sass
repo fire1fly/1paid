@@ -1,6 +1,19 @@
 .layout
-  // background: #f3f7ff
+  background: #f3f7ff
   &-grid
     min-height: 100vh
     display: grid
     grid-template-columns: 440px 1fr
+  &-page
+    display: grid
+    grid-template-columns: 124px 1fr
+    grid-template-rows: auto 1fr
+  &-lf
+    grid-column: 1/2
+    grid-row: 1/-1
+  &-h
+    grid-column: 2/3
+    grid-row: 1/2
+  &-b
+    grid-column: 2/3
+    grid-row: -1/-2
