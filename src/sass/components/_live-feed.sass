@@ -1,0 +1,124 @@
+.lf
+  height: 100%
+  background: #E5EAF5
+  display: flex
+  flex-direction: column
+  &-h
+    flex: 0 0 auto
+  &-bar
+    padding: 12px 8px
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &-inf
+    border-radius: 100px
+    padding: 12px 16px 12px 12px
+    display: flex
+    align-items: center
+    gap: 7px
+    background: var(--color-white)
+    &-ind
+      flex: 0 0 auto
+      border-radius: 50%
+      width: 20px
+      height: 20px
+      display: flex
+      align-items: center
+      justify-content: center
+      background-color: rgba(var(--color-secondary-gradient-1-rgb) / 45%)
+      &-point
+        border-radius: 50%
+        width: 10px
+        height: 10px
+        +gradient-secondary
+      &-value
+        +font-primary-bold
+        font-size: 12px
+        color: #8995AF
+      &-label
+        +font-primary-med
+        font-size: 10px
+        color: #A8B4CD
+  &-toggle
+    flex: 0 0 auto
+    width: 10px
+    height: 100%
+    display: flex
+    justify-content: flex-end
+    cursor: pointer
+  &-change
+    height: 41px
+    display: flex
+    background: #CED5E7
+    &-item
+      flex: 1 1 auto
+      cursor: pointer
+      overflow: hidden
+      &:nth-of-type(1)
+        border-top-right-radius: 40px
+        border-bottom-right-radius: 40px
+      &:nth-of-type(2)
+        border-top-left-radius: 40px
+        border-bottom-left-radius: 40px
+    input[type="radio"]
+      display: none
+      &:checked + .lf-change-btn
+        +gradient-primary
+        color: var(--color-white)
+    &-btn
+      height: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      background: transparent
+      color: #7F8CA5
+  &-feed
+    position: relative
+    min-height: 100vh
+    flex: 1 0 auto
+    overflow: hidden
+    padding: 0 12px
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      z-index: 1
+      display: block
+      width: 100%
+      height: 200px
+      background: linear-gradient(180deg, rgba(229, 234, 245, 0.00) 0%, #E5EAF5 100%)
+  &-item
+    position: relative
+    margin-top: 5px
+    &-pic
+      width: 100%
+    &-plate
+      position: absolute
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+      border-radius: 40px
+      width: 80px
+      height: 24px
+      padding: 0 4px
+      display: grid
+      grid-template-columns: 16px 1fr
+      gap: 5px
+      align-items: center
+      background: var(--color-white)
+    &-avatar
+      border-radius: 50%
+      width: 16px
+      height: 16px
+      overflow: hidden
+      &-pic
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &-name
+      +font-primary-bold
+      font-size: 12px
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis
