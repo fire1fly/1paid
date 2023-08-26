@@ -1,0 +1,41 @@
+.h
+  display: flex
+  align-items: center
+  &-backlink
+    flex: 0 0 auto
+    border: 1px solid #E8EAF7
+    border-radius: 24px
+    width: 57px
+    height: 24px
+    padding: 0 16px
+    display: flex
+    align-items: center
+    justify-content: center
+    color: #C5CFE4
+    svg
+      width: 100%
+  &-nav
+    &-link
+      position: relative
+      transition: 0.2s
+      &::after
+        content: ''
+        position: absolute
+        top: calc(100% + 8px)
+        left: 0
+        width: 100%
+        height: 3px
+        +gradient-primary
+        opacity: 0
+        box-shadow: 0px 2px 13px 0px rgba(var(--color-primary-gradient-1-rgb) / 71%)
+        transition: 0.2s
+      &:hover
+        color: #0C0C0C
+        &::after
+          opacity: 1
+  &-notif
+    .notif-btn
+      box-shadow: 0px 25px 35px rgba(226, 227, 243, 0.65)
+  &-profile
+    .hp-card
+      box-shadow: 0px 25px 35px 0px rgba(226, 227, 243, 0.65)
