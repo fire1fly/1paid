@@ -1,5 +1,6 @@
 import '../sass/styles.sass';
 import { header } from './components/header'
+import { mobileSidebar } from './components/mobileSidebar';
 
 if (__IS_DEV__) {
   import('../pug/pages/index.pug')
@@ -8,3 +9,4 @@ if (__IS_DEV__) {
 }
 
 header();
+mobileSidebar();
