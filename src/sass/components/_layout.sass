@@ -3,7 +3,14 @@
   &-grid
     min-height: 100vh
     display: grid
-    grid-template-columns: 440px 1fr
+    grid-template-columns: auto 1fr
+  &-sidebar
+    position: relative
+    width: 440px
+    overflow: hidden
+    transition: 0.3s width ease-out
+    &._hide
+      width: 0
   &-page
     display: grid
     grid-template-columns: 124px 1fr
