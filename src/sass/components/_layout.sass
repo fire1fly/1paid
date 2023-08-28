@@ -13,7 +13,7 @@
       width: 0
   &-page
     display: grid
-    grid-template-columns: 124px 1fr
+    grid-template-columns: auto 1fr
     grid-template-rows: auto 1fr
   &-lf
     grid-column: 1/2
@@ -24,3 +24,25 @@
   &-b
     grid-column: 2/3
     grid-row: -1/-2
+
+@media (max-width: 1600px)
+  .layout
+    &-sidebar
+      width: 320px
+
+@media (max-width: 1440px)
+  .layout
+    &-grid
+      grid-template-columns: 1fr
+    &-sidebar
+      position: fixed
+      top: 0
+      left: 0
+      width: 320px
+      height: 100%
+      z-index: 20
+      transform: translateX(-320px)
+      transition: 0.3s transform ease-out
+      &._hide
+        width: 320px
+        transform: translateX(0px)
