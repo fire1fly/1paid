@@ -24,12 +24,12 @@
 
 .navpin
   each item in navLinks
-    a.navpin-item(href=item.link class="mt-[30px] first-of-type:mt-0")
+    a.navpin-item(href=item.link class="mt-[30px] first-of-type:mt-0 3xl:mt-4")
       .navpin-plate
         +image('link-pin-plate.svg', 'navpin-plate-pic', 'dots')
         +image('dots-1.svg', 'navpin-plate__dots-1', 'dots')
         +image('dots-1.svg', 'navpin-plate__dots-2', 'dots')
         .navpin-plate-icon
           !=item.icon
-      .navpin-text(class="text-sm uppercase ml-7")= item.label
+      .navpin-text(class="text-sm uppercase ml-7 3xl:text-xs 3xl:ml-4")= item.label
 

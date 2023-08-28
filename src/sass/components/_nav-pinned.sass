@@ -20,7 +20,6 @@
     display: flex
     align-items: center
     justify-content: center
-    // overflow: hidden
     &::after
       content: ''
       position: absolute
@@ -62,3 +61,15 @@
   &-text
     +font-primary-bold
     color: var(--color-grey-200)
+
+@media (max-width: 1600px)
+  .navpin
+    &-item
+      height: 50px
+      &:hover
+        .navpin-plate
+          &::after
+            box-shadow: 0px 0px 30px 25px var(--color-primary-gradient-1)
+    &-plate
+      &::after
+        box-shadow: 0px 0px 30px 15px var(--color-primary-gradient-1)
