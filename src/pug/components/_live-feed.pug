@@ -8,7 +8,11 @@
           .lf-inf-ind-value 2 381
           .lf-inf-ind-label Online
       .lf-toggle(title="Переключить вид")
-        +image('icon-dots-1.svg', 'lf-toggle-icon', 'toggle live feed')
+        <svg width="4" height="22" viewBox="0 0 4 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="2" cy="20" r="2" transform="rotate(-90 2 20)" fill="currentColor"/>
+          <circle cx="2" cy="11" r="2" transform="rotate(-90 2 11)" fill="currentColor"/>
+          <circle cx="2" cy="2" r="2" transform="rotate(-90 2 2)" fill="currentColor"/>
+        </svg>
     .lf-change
       label.lf-change-item
         input(type="radio" name="lf_type" value="1" checked)
