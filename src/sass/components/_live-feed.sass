@@ -4,6 +4,59 @@
   background: #E5EAF5
   display: flex
   flex-direction: column
+  &._lf-row
+    border-radius: 8px
+    width: 100%
+    height: 124px
+    flex-direction: row
+    overflow: hidden
+    .lf
+      &-h
+        padding: 16px
+        display: grid
+        gap: 10px
+      &-bar
+        padding: 0
+        flex-direction: row-reverse
+        gap: 10px
+      &-toggle
+        height: 22px
+      &-inf
+        width: 100px
+        padding: 8px
+        border-radius: 20px
+      &-change
+        border-radius: 23px
+        height: 45px
+        overflow: hidden
+      &-feed
+        min-height: auto
+        display: flex
+        align-items: center
+        height: 100%
+        padding: 0
+        overflow: hidden
+        &::after
+          width: 30px
+          height: 100%
+          top: 0
+          left: auto
+          right: 0
+        &-track
+          padding: 10px 0
+          height: 100%
+          display: flex
+          align-items: center
+      &-item
+        margin-top: 0
+        margin-left: 18px
+        height: 100%
+        &:nth-of-type(1)
+          margin-left: 0
+        &-pic
+          height: 100%
+        &-avatar
+          transform: scale(2) translateX(-5px)
   &-h
     flex: 0 0 auto
   &-bar
@@ -32,6 +85,8 @@
         width: 10px
         height: 10px
         +gradient-secondary
+      &-value, &-label
+        line-height: 1
       &-value
         +font-primary-bold
         font-size: 12px
@@ -46,7 +101,11 @@
     height: 100%
     display: flex
     justify-content: flex-end
+    color: #BDC6D9
     cursor: pointer
+    transition: 0.2s
+    &:hover
+      color: var(--color-primary-gradient-1)
   &-change
     height: 41px
     display: flex
