@@ -6,7 +6,6 @@ import { sidebar } from './components/sidebar';
 
 if (__IS_DEV__) {
   import('../pug/pages/index.pug')
-  import('../pug/components/_header.pug')
 }
 
 header();
