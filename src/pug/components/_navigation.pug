@@ -1,0 +1,14 @@
+-
+  var navList = [
+    {label: 'Главная', link: '#'},
+    {label: 'Каталог', link: '#'},
+    {label: 'Топ юзеров', link: '#'},
+    {label: 'Отзывы', link: '#'},
+    {label: 'Гарантии', link: '#'},
+    {label: 'Случайные предметы', link: '#'},
+    {label: 'Форум', link: '#'},
+  ]
+
+nav.nav(class="flex gap-x-5 gap-y-5 flex-wrap mx-4 3xl:gap-x-2.5 lg:flex-col lg:items-start lg:gap-y-8")
+  each item in navList
+    a.nav-link(href=item.link class="font-primary-bold text-sm text-[#8A98B3] uppercase 3xl:text-xs lg:text-sm lg:text-white/30")= item.label

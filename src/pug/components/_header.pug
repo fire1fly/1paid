@@ -1,31 +1,20 @@
--
-  var navList = [
-    {label: 'Главная', link: '#'},
-    {label: 'Каталог', link: '#'},
-    {label: 'Топ юзеров', link: '#'},
-    {label: 'Отзывы', link: '#'},
-    {label: 'Гарантии', link: '#'},
-    {label: 'Случайные предметы', link: '#'},
-    {label: 'Форум', link: '#'},
-  ]
-
 .h-wrapper
   header.h
     a.h-backlink(href="#")
       <svg viewBox="0 0 26 13" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0.469669 5.96967C0.176777 6.26257 0.176777 6.73744 0.469669 7.03033L5.24264 11.8033C5.53553 12.0962 6.01041 12.0962 6.3033 11.8033C6.59619 11.5104 6.59619 11.0355 6.3033 10.7426L2.06066 6.5L6.3033 2.25736C6.59619 1.96447 6.59619 1.48959 6.3033 1.1967C6.01041 0.903807 5.53553 0.903808 5.24264 1.1967L0.469669 5.96967ZM26 5.75L1 5.75L1 7.25L26 7.25L26 5.75Z" fill="currentColor"/>
       </svg>
-    nav.h-nav(class="flex gap-x-5 gap-y-5 flex-wrap mx-4 3xl:gap-x-2.5")
-      each item in navList
-        a.h-nav-link(href=item.link class="font-primary-bold text-sm text-[#8A98B3] uppercase 3xl:text-xs")= item.label
+    include ../components/_navigation.pug
     .h-bar(class="ml-auto flex items-center gap-x-3")
-      btn.h-openmenu.menu-open
+      button.h-openmenu.menu-open
         span
         span
       .h-notif(class="flex-shrink-0")
         include ../components/_notifications.pug
       .h-profile(class="min-w-[300px]")
-        include ../components/_header-profile.pug
+        include ../components/_profile-mini-card.pug
+        .h-profile-content(class="rounded-[22px] min-w-[290px] py-3 bg-white shadow-sm")
+          include ../components/_navigation-profile.pug
 
 
 

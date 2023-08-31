@@ -2,12 +2,7 @@
   .cm-inner
     .cm-h(class="px-10 pt-8 3xl:px-5 3xl:pt-5")
       .cm-h-inner(class="flex justify-between items-center")
-        .cm-logo
-          +image('dots-1.svg', 'cm-logo__dots', '1paid.ru')
-          +image('logo.svg', 'cm-logo-pic', '1paid.ru')
-        //- .cm-close.menu-close(class="flex-shrink-0 w-[30px] h-[21px] flex flex-col justify-between cursor-pointer")
-          .cm-close-item(class="w-full h-[3px] bg-[#467EE4]")
-          .cm-close-item(class="w-full h-[3px] bg-[#467EE4]")
+        include ../components/_logo
     .cm-b(class="py-10 3xl:py-5")
       .cm-container
         include ../components/_total-site-card
