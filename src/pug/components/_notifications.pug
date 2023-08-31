@@ -1,5 +1,5 @@
 .notif
-  btn.btn.btn-secondary.notif-btn(class="rounded-full w-11 h-11 justify-center cursor-pointer")
+  button.btn.btn-secondary.notif-btn(class="rounded-full w-11 h-11 justify-center cursor-pointer lg:w-[50px] lg:h-[50px]")
     .btn-icon(class="text-white")
       <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1339 15.0561C15.1164 13.6921 14.3309 12.4579 13.1111 11.8778V8.0122C13.1541 5.35225 11.2421 3.07229 8.6421 2.68307C7.17902 2.49536 5.70713 2.95641 4.60455 3.9478C3.50197 4.93918 2.87616 6.36427 2.88786 7.85698V11.7522C1.46861 12.2353 0.509251 13.5775 0.5 15.0931C0.505439 15.3331 0.607572 15.5604 0.782704 15.7223C0.957837 15.8842 1.19075 15.9667 1.4274 15.9505H14.2649C14.4973 15.9485 14.7194 15.8532 14.8824 15.6855C15.0454 15.5177 15.1358 15.2913 15.1339 15.0561ZM7.26932 4.19823C8.3437 3.97626 9.45975 4.25478 10.309 4.95682C11.1583 5.65886 11.6509 6.71009 11.6507 7.81997V11.5156H4.34839V7.97519C4.30883 6.17267 5.5311 4.59219 7.26932 4.19823ZM2.07756 14.4722C2.33643 13.5933 3.13585 12.9917 4.04189 12.9939H11.6509C12.5562 12.9941 13.3543 13.5948 13.6153 14.4722H2.07756Z" fill="currentColor"/>
@@ -23,7 +23,7 @@
               <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.20975 3.40829H15.1159C15.3645 3.40497 15.6027 3.50787 15.7707 3.69114C15.9387 3.87442 16.0205 4.12066 15.9956 4.36803L15.2685 11.3479C15.2277 11.7888 14.8606 12.1276 14.4179 12.1332H5.21312C4.7899 12.1315 4.43001 11.8239 4.36244 11.4061L2.90829 4.29532L2.34845 1.95415H0.727073C0.325522 1.95415 0 1.62863 0 1.22707C0 0.825522 0.325522 0.5 0.727073 0.5H2.79923C3.19507 0.507287 3.53728 0.778079 3.63537 1.16164L4.20975 3.40829ZM5.69289 10.679H13.8943L14.4759 4.86244H4.52958L5.69289 10.679Z" fill="currentColor"/>
               </svg>
-          .notif-item-inf
+          .notif-item-inf(class="flex-grow")
             .notif-item-h(class="flex items-center justify-between flex-wrap gap-2 text-xs")
               .notif-item-title(class="font-secondary-bold text-black") Стол заказа!
               .notif-item-time(class="font-secondary-med text-[#C5CFE4]") 22:15
