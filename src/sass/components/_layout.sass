@@ -44,7 +44,7 @@
 @media (max-width: 1440px)
   .layout
     &-grid
-      grid-template-columns: 1fr
+      display: block
     &-sidebar
       position: fixed
       top: 0
@@ -57,3 +57,12 @@
       &._hide
         width: 320px
         transform: translateX(0px)
+
+@media (max-width: 1200px)
+  .layout
+    &-page
+      &._lf-row
+        .layout
+          &-lf
+            width: 100%
+            padding: 0

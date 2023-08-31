@@ -8,10 +8,12 @@
     border-radius: 8px
     width: 100%
     height: 124px
-    flex-direction: row
+    display: grid
+    grid-template-columns: 150px calc(100% - 150px)
     overflow: hidden
     .lf
       &-h
+        flex: 0 0 auto
         padding: 16px
         display: grid
         gap: 10px
@@ -22,7 +24,7 @@
       &-toggle
         height: 22px
       &-inf
-        width: 100px
+        flex: 1 1 auto
         padding: 8px
         border-radius: 20px
       &-change
@@ -30,18 +32,21 @@
         height: 45px
         overflow: hidden
       &-feed
+        flex: 1 1 auto
         min-height: auto
         display: flex
         align-items: center
         height: 100%
         padding: 0
         overflow: hidden
+        overflow: hidden
         &::after
-          width: 30px
+          width: 10%
           height: 100%
           top: 0
           left: auto
           right: 0
+          background: linear-gradient(90deg, rgba(229, 234, 245, 0.00) 0%, #E5EAF5 100%)
         &-track
           padding: 10px 0
           height: 100%
@@ -50,6 +55,7 @@
       &-item
         margin-top: 0
         margin-left: 18px
+        flex: 0 0 auto
         height: 100%
         &:nth-of-type(1)
           margin-left: 0
@@ -189,3 +195,20 @@
     &-inf
       border-radius: 20px
       padding: 8px
+
+@media (max-width: 1200px)
+  .lf
+    &._lf-row
+      border-radius: 0
+      height: 100px
+      grid-template-columns: 100px calc(100% - 100px)
+      .lf
+        &-h
+          width: 100px
+          padding: 8px
+        &-change
+          height: 36px
+        &-feed
+          padding-left: 20px
+    &-toggle
+      display: none
