@@ -1,0 +1,17 @@
+.hm
+  .hm-inner(class="px-5 flex items-center justify-between")
+    .hm-logo
+      include ../components/_logo
+    .hm-bar(class="flex items-center gap-2.5")
+      .hm-notif(class="flex-shrink-0")
+        include ../components/_notifications.pug
+      .hm-profile(class="flex-shrink-0")
+        button.btn.btn-orange.hm-profile-btn(class="flex-shrink-0 rounded-full w-[50px] h-[50px] flex items-center justify-center text-white")
+          include ../../assets/images/icon-user.svg
+        .hm-profile-content(class="rounded-xl bg-white w-[290px] py-3 lg:w-[320px]")
+          include ../components/_profile-mini-card.pug
+          .mt-3
+          include ../components/_navigation-profile.pug
+      .hm-btn-menu.mmenu-open(class="flex-shrink-0 w-[50px] h-[50px] flex justify-center items-center flex-col gap-4 cursor-pointer")
+        span(class="w-[30px] h-[3px] bg-white rounded-full")
+        span(class="w-[30px] h-[3px] bg-white rounded-full")
