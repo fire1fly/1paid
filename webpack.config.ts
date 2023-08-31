@@ -8,6 +8,7 @@ export default (env: BuildEnv) => {
     entry: path.resolve(__dirname, 'src', 'js', 'index.ts'),
     build: path.resolve(__dirname, 'build'),
     src: path.resolve(__dirname, 'src'),
+    favicon: path.resolve(__dirname, 'src', 'assets', 'images', 'favicon.png')
   };
 
   const mode = env.mode || 'development';

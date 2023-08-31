@@ -13,6 +13,7 @@ export default function buildPlugins({ paths, isDev }: BuildOptions):
   const plugins = [
     ...pagePaths.map(path => new HtmlWebpackPlugin({
       template: path,
+      favicon: paths.favicon,
       filename: `${path.split(/\/|.pug/).splice(-2, 1)}.html`
     })),
     new webpack.ProgressPlugin(),
