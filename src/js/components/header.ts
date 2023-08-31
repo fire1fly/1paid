@@ -13,8 +13,18 @@ export function header() {
     animation: 'shift-away'
   });
 
-  const profileBtn = document.querySelector(".hp-btn-open");
-  const profileContent = document.querySelector(".hp-content") || '';
+  const mobileNotifBtn = document.querySelector(".hm .notif-btn");
+  const mobileNotifContent = document.querySelector(".hm .notif-content") || '';
+  mobileNotifBtn && tippy(mobileNotifBtn, {
+    content: mobileNotifContent,
+    trigger: 'click',
+    interactive: true,
+    placement: 'bottom',
+    animation: 'shift-away'
+  });
+
+  const profileBtn = document.querySelector(".h-profile-btn-open");
+  const profileContent = document.querySelector(".h-profile-content") || '';
   profileBtn && tippy(profileBtn, {
     content: profileContent,
     trigger: 'click',
@@ -28,5 +38,16 @@ export function header() {
     onHide: () => {
       profileBtn.classList.remove('_open');
     },
+  })
+
+  const mobileProfileBtn = document.querySelector(".hm-profile-btn");
+  const mobileProfileContent = document.querySelector(".hm-profile-content") || '';
+  mobileProfileBtn && tippy(mobileProfileBtn, {
+    content: mobileProfileContent,
+    trigger: 'click',
+    interactive: true,
+    placement: 'bottom',
+    animation: 'shift-away',
+    offset: [10, 20],
   })
 }

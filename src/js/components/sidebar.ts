@@ -1,4 +1,4 @@
-export function mobileSidebar() {
+export function sidebar() {
   const sidebarEl = document.querySelector('.menu');
   const toggleBtn = document.querySelector('.menu-open');
 
