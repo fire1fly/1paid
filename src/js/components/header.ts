@@ -1,6 +1,4 @@
 import tippy from "tippy.js";
-import 'tippy.js/animations/shift-away.css';
-
 
 export function header() {
   const notifBtn = document.querySelector(".notif-btn");
