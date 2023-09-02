@@ -1,0 +1,41 @@
+.prsl(class="my-6 rounded-md min-h-[100px] px-8 py-3")
+  .swiper.prsl-slider(class="w-full h-full")
+    .swiper-wrapper
+      - for (var i = 1; i <= 2; i++)
+        .swiper-slide
+          .prsl-item(class="px-[110px] flex items-center justify-between gap-4 flex-wrap")
+            .prsl-item-inf(class="flex items-center gap-4")
+              .prsl-item-pic(class="w-[180px] flex justify-center items-center")
+                +image('raffle.png', 'w-full', 'raffle')
+              .prsl-item-award(class="flex items-center gap-2")
+                .prsl-item-award-pic(class="flex-shrink-0 w-16 h-16 flex justify-center items-center")
+                  +image('icon-game-rank-1.svg', 'max-w-full max-h-full', 'award')
+                .prsl-item-award-inf
+                  .prsl-item-award-title(class="font-secondary-bold text-base text-white") Аккаунт Warface
+                  .prsl-item-award-subtitle(class="mt-1.5 font-secondary-bold text-sm text-white/40") 25 Ранг
+            .prsl-item-bar(class="flex items-center gap-6")
+              a.prsl-item-btn.btn.btn-primary(href="#" class="rounded w-[180px] h-10 justify-center px-1")
+                .btn-text(class="font-secondary-med text-[15px] text-white") Присоединиться
+              .timer(class="flex items-center gap-1")
+                .timer-item(class="relative flex-shrink-0 flex justify-center items-center w-[80px] h-[80px]")
+                  +circle-progress(3, '#ffffff', 0.25)(data-percent="80" data-measure="80")
+                  .timer-item-inf(class="absolute flex flex-col items-center justify-center top-0 left-0 w-full h-full z-[1]")
+                    .timer-value(class="font-primary-med text-center text-lg text-white leading-none") 24
+                    .timer-value(class="font-primary-bold text-center text-[11px] text-white/60 leading-none") часа
+                .timer-item(class="relative flex-shrink-0 flex justify-center items-center w-[80px] h-[80px]")
+                  +circle-progress(3, '#ffffff', 0.25)(data-percent="60" data-measure="80")
+                  .timer-item-inf(class="absolute flex flex-col items-center justify-center top-0 left-0 w-full h-full z-[1]")
+                    .timer-value(class="font-primary-med text-center text-lg text-white leading-none") 44
+                    .timer-value(class="font-primary-bold text-center text-[11px] text-white/60 leading-none") минуты
+                .timer-item(class="relative flex-shrink-0 flex justify-center items-center w-[80px] h-[80px]")
+                  +circle-progress(3, '#ffffff', 0.25)(data-percent="5" data-measure="80")
+                  .timer-item-inf(class="absolute flex flex-col items-center justify-center top-0 left-0 w-full h-full z-[1]")
+                    .timer-value(class="font-primary-med text-center text-lg text-white leading-none") 05
+                    .timer-value(class="font-primary-bold text-center text-[11px] text-white/60 leading-none") секунд
+    .prsl-btn.prsl-btn-prev
+      .btn-icon
+        include ../../assets/images/icon-arrow-left.svg
+    .prsl-btn.prsl-btn-next
+      .btn-icon
+        include ../../assets/images/icon-arrow-right.svg
+    .swiper-pagination.prsl-pag
