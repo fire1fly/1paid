@@ -56,11 +56,10 @@
         margin-top: 0
         margin-left: 18px
         flex: 0 0 auto
+        width: 120px
         height: 100%
         &:nth-of-type(1)
           margin-left: 0
-        &-pic
-          height: 100%
         &-avatar
           transform: scale(2) translateX(-5px)
   &-h
@@ -157,8 +156,11 @@
   &-item
     position: relative
     margin-top: 5px
+    display: flex
+    align-items: center
+    justify-content: center
     &-pic
-      width: 100%
+      max-width: 100%
     &-plate
       position: absolute
       bottom: 0
@@ -210,5 +212,14 @@
           height: 36px
         &-feed
           padding-left: 20px
+        &-item
+          width: 90px
     &-toggle
       display: none
+
+@media (max-width: 520px)
+  .lf
+    &._lf-row
+      .lf
+        &-item
+          width: 80px
