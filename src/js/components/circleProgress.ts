@@ -53,8 +53,6 @@ export function circleProgress() {
       }
     }
 
-
-    // let measure = parseInt(el.dataset.measure as string);
     const svg = item.querySelector('.svg') as SVGElement;
     const backCircle = item.querySelector('.placeholder') as SVGCircleElement;
     const frontCircle = item.querySelector('.progress') as SVGCircleElement;
