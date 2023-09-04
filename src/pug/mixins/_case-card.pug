@@ -1,0 +1,20 @@
+mixin case-card(colorType, type, title, attachColor, value, extraValue, discount, btnText = 'Крутить рулетку')
+  -
+    var bgSrc = 'case-card-bg-' + colorType + '.png'
+    var picSrc = 'case-' + colorType + '.png'
+  .csc(class="rounded-lg min-h-[235px] flex md:min-h-[200px] 3sm:min-h-0")&attributes(attributes)
+    .csc-bg
+      +image(bgSrc, 'csc-bg-pic')
+    .csc-case
+      +image(picSrc, 'csc-case-pic')
+    .csc-inner(class="p-6 inline-flex flex-col items-start lg:p-4")
+      .csc-type(class="font-secondary-bold text-base text-white md:text-xs")= type
+      .csc-title(class="font-primary-bold italic text-[45px] tracking-wider uppercase leading-none lg:text-4xl md:text-2xl")= title
+      .csc-value(class="mt-3 mb-5 rounded-full h-10 min-w-[100px] px-8 inline-flex justify-center items-center lg:min-w-[80px] lg:h-8 lg:px-4 md:h-8 md:mt-2" class='bg-gradient-' + attachColor)
+        .csc-value-text(class="font-primary-bold text-base text-white lg:text-sm md:text-xs")= value
+        if extraValue
+          .csc-value-attach-bottom(class="bg-gradient-secondary rounded-full h-5 px-2 py-[3px] flex items-center font-primary-bold text-[11px] text-white leading-none lg:py-[1px] lg:text-[10px]")= extraValue
+        if discount
+          .csc-value-attach-top(class="rounded-full h-5 px-1 py-[1px] flex items-center font-primary-bold text-sm text-white leading-[0] lg:text-[10px]")= discount
+      a.btn.btn-secondary.csc-btn(href="#" class="mt-auto rounded-full h-[45px] px-6 justify-center md:h-10 md:px-3")
+        .btn-text(class="font-primary-bold text-xs text-white uppercase")= btnText
