@@ -24,6 +24,10 @@ module.exports = {
         "primary-med": ['TTNorms Medium', 'system-ui, -apple-system, BlinkMacSystemFont, sans-serif'],
         "secondary-bold": ['Acrom Bold', 'system-ui, -apple-system, BlinkMacSystemFont, sans-serif'],
         "secondary-med": ['Acrom Medium', 'system-ui, -apple-system, BlinkMacSystemFont, sans-serif'],
+      },
+      backgroundImage: {
+        'gradient-primary': 'linear-gradient(37deg, var(--color-primary-gradient-1) 0%, var(--color-primary-gradient-2) 100%)',
+        'gradient-secondary': 'linear-gradient(90deg, var(--color-secondary-gradient-1) 0%, var(--color-secondary-gradient-2) 100%)'
       }
     },
   },
