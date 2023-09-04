@@ -1,7 +1,7 @@
 .prsl
   background: transparent url('assets/images/banner-bg-1.png') no-repeat
   background-size: cover
-  background-position: center center
+  background-position: top center
   &-btn
     position: absolute
     top: 50%
@@ -26,3 +26,14 @@
       left: 0
     &-next
       right: 0
+
+@media ( max-width: 1600px )
+  .prsl
+    &-btn
+      width: 60px
+
+@media ( max-width: 640px )
+  .prsl
+    &-btn
+      width: 40px
+      height: 40px

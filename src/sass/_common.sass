@@ -1,6 +1,14 @@
 *
   box-sizing: border-box
   -webkit-tap-highlight-color: rgba(0,0,0,0)
+  &::-webkit-scrollbar
+    width: 4px
+    height: 4px
+  &::-webkit-scrollbar-track
+    background: transparent
+  &::-webkit-scrollbar-thumb
+    // border-radius: 6px
+    background-color: var(--color-primary-gradient-2)
 
 body
   font-size: 16px
