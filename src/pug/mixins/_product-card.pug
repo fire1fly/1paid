@@ -1,0 +1,58 @@
+mixin product-card
+  .pc(class="rounded-lg bg-white")
+    .pc-plate-container
+      .pc-plate(class="bg-gradient-primary _shadow-primary py-1 px-6 3sm:px-2 3sm:py-[1px]") new
+      .pc-plate(class="bg-gradient-secondary _shadow-secondary py-1 px-6 3sm:px-2 3sm:py-[1px]") 3 дня гарантия
+    .pc-supinfo(class="font-secondary-bold text-[13px] text-black 3sm:text-xs")
+      .pc-rating(class="flex gap-1 items-center")
+        .pc-rating-icon(class="flex-shrink-0 w-[22px] h-[22px] [&_svg]:w-full 3sm:w-4 3sm:h-4")
+          include ../../assets/images/icon-star-yellow.svg
+        span 4.8
+      //- .pc-id #23141
+    .pc-ibar(class="flex justify-end items-center flex-wrap gap-3")
+      //- button.pc-btn-edit
+        .btn-icon
+          include ../../assets/images/icon-edit.svg
+      button.pc-btn-like
+        .btn-icon._default
+          include ../../assets/images/icon-like-outline.svg
+        //- .btn-icon._checked
+          include ../../assets/images/icon-like-fill.svg
+      //- button.pc-btn-remove
+        .btn-icon
+          include ../../assets/images/icon-close.svg
+    .pc-preview(class="flex justify-center items-center")
+      .pc-preview-inner(class="max-w-[120px] w-full h-[120px] 3sm:max-w-[80px] 3sm:max-h-[80px]")
+        +image('product-preview-1.png', 'pc-preview-pic w-full')
+    .pc-info
+      .pc-title(class="font-secondary-bold text-[13px] text-black 3sm:text-[12px]") Makmilan Gr-23
+      .pc-subtitle(class="mt-1 font-secondary-med text-xs text-[#A6B1C7] 3sm:text-[10px]") Оружие в идеальном состоянии, прямо из завода.
+    .pc-subinfo(class="text-[#BEC1DB] flex flex-col gap-2 3sm:gap-1")
+      .pc-subinfo-value(class="font-secondary-med text-[10px]") Тип: Оружие
+      .pc-subinfo-value(class="font-secondary-med text-[10px]") Кол: 33
+      .pc-subinfo-value(class="font-secondary-med text-[10px]") Продажа от: 33 шт
+      .pc-subinfo-value(class="font-secondary-med text-[10px]") Срок: Навсегда
+    .pc-tbar
+      .pc-tbar-inner(class="flex items-center gap-3 3sm:gap-1.5 3sm:flex-col 3sm:items-start")
+        .pc-source(class="flex-shrink-0 w-11 h-11 3sm:w-8 3sm:h-8")
+          .pc-source-user(class="w-full h-full relative")
+            .pc-source-status._green
+            +image('avatar-example-3.png', 'w-full h-full object-cover object-center')
+          //- .pc-source-admin(class="relative rounded-full w-full h-full flex items-center justify-center bg-[#2460EC]")
+            .pc-source-admin-icon(class="w-[55%] text-white")
+              include ../../assets/images/icon-headphones.svg
+            .pc-source-status._green
+          //- .pc-source-case(class="relative rounded-full w-full h-full flex items-center justify-center")
+            +image('case-blue.png', 'w-full object-cover object-center')
+        .pc-total(class="flex-grow h-11 rounded-full border border-solid border-[#F3F7FF] flex items-center justify-between pl-4 gap-2 3sm:h-10 3sm:pl-3 3sm:w-full")
+          .pc-total-inf(class="flex flex-wrap gap-x-[5px] font-secondary-bold text-xs 3sm:text-[10px]")
+            span(class="text-[#BEC1DB]") Цена
+            span(class="text-black") 120.00 <b>₽</b>
+          .pc-total-btn-wrap(class="flex-shrink-0 w-11 h-11 3sm:w-10 3sm:h-10")
+            //- a.btn.btn-primary.pc-total-btn(href="#" class="rounded-full w-full h-full justify-center")
+              .btn-icon(class="w-1/2 [&_svg]:w-full text-white")
+                include ../../assets/images/icon-chat-message.svg
+            a.btn.btn-secondary.pc-total-btn(href="#" class="rounded-full w-full h-full justify-center")
+              .btn-icon(class="w-1/2 [&_svg]:w-full text-white")
+                include ../../assets/images/icon-shopping-cart-3.svg
+
