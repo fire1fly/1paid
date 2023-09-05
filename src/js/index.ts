@@ -8,6 +8,7 @@ import { mobileMenu } from './components/mobileMenu';
 import { sidebar } from './components/sidebar';
 import { circleProgress } from './components/circleProgress';
 import { initSliders } from './components/sliders';
+import { scrollToTop } from './components/scrollToTop';
 
 if (__IS_DEV__) {
   import('../pug/pages/index.pug')
@@ -19,3 +20,4 @@ liveFeed();
 mobileMenu();
 circleProgress();
 initSliders();
+scrollToTop();
