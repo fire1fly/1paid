@@ -1,0 +1,129 @@
+.pc
+  position: relative
+  padding: 24px
+  padding-top: 28px
+  box-shadow: 0px 25px 35px 0px rgba(226, 227, 243, 0.65)
+  display: grid
+  row-gap: 2px
+  column-gap: 8px
+  &-plate
+    flex: 1 1 auto
+    +font-primary-bold
+    font-size: 12px
+    color: var(--color-white)
+    text-transform: uppercase
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    &:nth-of-type(1)
+      border-bottom-left-radius: 22px
+    &:nth-last-of-type(1)
+      border-bottom-right-radius: 22px
+    &._shadow
+      &-primary
+        box-shadow: 0px 4px 32px 0px rgba(157, 63, 252, 0.42)
+      &-secondary
+        box-shadow: 0px 4px 32px 0px rgba(135, 252, 63, 0.42)
+    &-container
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+      max-width: 100%
+      display: flex
+  &-supinfo
+    grid-column: 1/2
+    grid-row: 1/2
+  &-ibar
+    grid-column: 2/3
+    grid-row: 1/span 1
+  &-preview
+    grid-column: 1/3
+    grid-row: 2/span 1
+  &-info
+    grid-column: 1/3
+    grid-row: 3/span 1
+    border-bottom: 1px solid #E9EAF4
+    padding-bottom: 12px
+  &-subinfo
+    grid-column: 1/3
+    grid-row: 4/span 1
+    padding-top: 12px
+    padding-bottom: 24px
+  &-tbar
+    grid-column: 1/3
+    grid-row: 5/span 1
+  &-btn
+    &-edit, &-remove
+      flex: 0 0 auto
+      &:hover
+        svg
+          color: #a9b1c4
+      svg
+        width: 18px
+        height: 18px
+        color: #C5CFE4
+        transition: color 0.2s
+    &-like
+      flex: 0 0 auto
+      cursor: pointer
+      &:hover
+        svg
+          color: var(--color-red-dark)
+      svg
+        width: 22px
+        height: 22px
+        color: var(--color-red-main)
+        transition: color 0.2s
+  &-source
+    &-status
+      position: absolute
+      border: 3px solid #FFFFFF
+      right: -2px
+      bottom: -2px
+      border-radius: 50%
+      width: 14px
+      height: 14px
+      &._green
+        background: var(--color-green-light)
+      &._yellow
+        background: var(--color-orange-light)
+      &._red
+        background: var(--color-red-main)
+  &-total
+    &-btn
+      &.btn
+        &-primary
+          box-shadow: 0px 4px 28px 0px rgba(30, 44, 166, 0.35)
+        &-secondary
+          box-shadow: 0px 4px 28px 0px rgba(103, 166, 30, 0.56)
+
+@media ( max-width: 1200px )
+  .pcg
+    &-grid
+      grid-template-columns: repeat(3, minmax(0, 1fr))
+
+@media ( max-width: 991px )
+  .pcg
+    &-grid
+      grid-template-columns: repeat(2, minmax(0, 1fr))
+
+@media ( max-width: 640px )
+  .pc
+    padding: 14px
+    padding-top: 20px
+    &-plate
+      font-size: 10px
+      &:nth-of-type(1)
+        border-bottom-left-radius: 8px
+      &:nth-last-of-type(1)
+        border-bottom-right-radius: 8px
+    &-info
+      padding-bottom: 8px
+    &-subinfo
+      padding: 8px 0
+
+@media ( max-width: 400px )
+  .pcg
+    &-grid
+      grid-template-columns: 1fr
