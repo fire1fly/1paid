@@ -5,7 +5,7 @@ function handleCircleMeasure(
   backCircle: SVGCircleElement,
   frontCircle: SVGCircleElement
 ) {
-  let radius = (measure / 2) - 10;
+  let radius = (measure / 2) - 3;
   let circleLength = 2 * Math.PI * radius;
   let percentToValue = circleLength - (circleLength * percent / 100);
 
@@ -14,13 +14,13 @@ function handleCircleMeasure(
   svg.setAttribute('viewBox', `0 0 ${measure} ${measure}`);
 
   backCircle.setAttribute('r', `${radius}`);
-  backCircle.setAttribute('cx', `${radius + 10}`);
-  backCircle.setAttribute('cy', `${radius + 10}`);
+  backCircle.setAttribute('cx', `${radius + 3}`);
+  backCircle.setAttribute('cy', `${radius + 3}`);
   backCircle.setAttribute('stroke-dasharray', `${circleLength}`);
 
   frontCircle.setAttribute('r', `${radius}`);
-  frontCircle.setAttribute('cx', `${radius + 10}`);
-  frontCircle.setAttribute('cy', `${radius + 10}`);
+  frontCircle.setAttribute('cx', `${radius + 3}`);
+  frontCircle.setAttribute('cy', `${radius + 3}`);
   frontCircle.setAttribute('stroke-dashoffset', `${percentToValue}`);
   frontCircle.setAttribute('stroke-dasharray', `${circleLength}`);
 }
