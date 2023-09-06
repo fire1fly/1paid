@@ -1,41 +1,41 @@
-.prsl(class="my-6 rounded-md min-h-[100px] px-8 py-3 3md:px-4")
+.prsl(class="my-6 rounded-md min-h-[100px] py-3 3sm:pb-6 sm:my-3")
   .swiper.prsl-slider(class="w-full h-full")
     .swiper-wrapper
-      - for (var i = 1; i <= 2; i++)
+      - for (var i = 1; i <= 4; i++)
         .swiper-slide
-          .prsl-item(class="px-[110px] flex items-center justify-between gap-4 flex-wrap 3xl:px-[70px] 2md:flex-col 2md:gap-2 3sm:px-10")
+          .prsl-item(class="flex items-center justify-between gap-4 flex-wrap 2md:flex-col 2md:gap-2")
             .prsl-item-inf(class="flex justify-center items-center gap-4 3md:gap-2 2md:flex-wrap")
-              .prsl-item-pic(class="w-[180px] flex justify-center items-center 3xl:w-[140px]")
+              .prsl-item-pic(class="w-[180px] flex justify-center items-center 3xl:w-[140px] sm:w-[100px]")
                 +image('raffle.png', 'w-full', 'raffle')
-              .prsl-item-award(class="flex items-center gap-2")
+              .prsl-item-award(class="flex items-center gap-2 sm:gap-1")
                 .prsl-item-award-pic(class="flex-shrink-0 w-16 h-16 flex justify-center items-center 3md:w-12 3md:h-12")
                   +image('icon-game-rank-1.svg', 'max-w-full max-h-full', 'award')
                 .prsl-item-award-inf
-                  .prsl-item-award-title(class="font-secondary-bold text-base text-white 3md:text-sm") Аккаунт Warface
-                  .prsl-item-award-subtitle(class="mt-1.5 font-secondary-bold text-sm text-white/40 3md:mt-0 3md:text-xs") 25 Ранг
-            .prsl-item-bar(class="flex justify-center items-center gap-6 3xl:gap-3 2md:flex-row-reverse 2md:flex-wrap 3sm:flex-col-reverse 3sm:gap-1")
-              a.prsl-item-btn.btn.btn-primary(href="#" class="rounded w-[180px] h-10 justify-center px-1 3xl:w-[150px]")
-                .btn-text(class="font-secondary-med text-[15px] text-white 3xl:text-sm") Присоединиться
+                  .prsl-item-award-title(class="font-secondary-bold text-base text-white 3md:text-sm sm:text-xs") Аккаунт Warface
+                  .prsl-item-award-subtitle(class="mt-1.5 font-secondary-bold text-sm text-white/40 3md:mt-0 3md:text-xs sm:text-[10px]") 25 Ранг
+            .prsl-item-bar(class="flex justify-center items-center gap-6 3xl:gap-3 2md:flex-row-reverse 3sm:gap-1")
+              a.prsl-item-btn.btn.btn-primary(href="#" class="rounded w-[180px] h-10 justify-center px-1 3xl:w-[150px] sm:max-w-[130px] sm:w-full sm:h-8 sm:px-2")
+                .btn-text(class="font-secondary-med text-[15px] text-white 3xl:text-sm 3sm:text-xs") Присоединиться
               .timer(class="flex items-center gap-1")
-                .timer-item(class="relative flex-shrink-0 flex justify-center items-center w-[80px] h-[80px] 3sm:w-14 3sm:h-14")
-                  +circle-progress(3, '#ffffff', 0.25, 4)(data-percent="80" data-measure="80" data-measure-640="56")
+                .timer-item(class="relative flex-shrink-0 flex justify-center items-center w-[67px] h-[67px] 3sm:w-11 3sm:h-11")
+                  +circle-progress(3, '#ffffff', 0.25, 4)(data-percent="80" data-measure="67" data-measure-640="44")
                   .timer-item-inf(class="absolute flex flex-col items-center justify-center top-0 left-0 w-full h-full z-[1]")
                     .timer-value(class="font-primary-med text-center text-lg text-white leading-none 3sm:text-xs") 24
                     .timer-value(class="font-primary-bold text-center text-[11px] text-white/60 leading-none 3sm:hidden") часа
-                .timer-item(class="relative flex-shrink-0 flex justify-center items-center w-[80px] h-[80px] 3sm:w-14 3sm:h-14")
-                  +circle-progress(3, '#ffffff', 0.25, 4)(data-percent="60" data-measure="80" data-measure-640="56")
+                .timer-item(class="relative flex-shrink-0 flex justify-center items-center w-[67px] h-[67px] 3sm:w-11 3sm:h-11")
+                  +circle-progress(3, '#ffffff', 0.25, 4)(data-percent="60" data-measure="67" data-measure-640="44")
                   .timer-item-inf(class="absolute flex flex-col items-center justify-center top-0 left-0 w-full h-full z-[1]")
                     .timer-value(class="font-primary-med text-center text-lg text-white leading-none 3sm:text-xs") 44
                     .timer-value(class="font-primary-bold text-center text-[11px] text-white/60 leading-none 3sm:hidden") минуты
-                .timer-item(class="relative flex-shrink-0 flex justify-center items-center w-[80px] h-[80px] 3sm:w-14 3sm:h-14")
-                  +circle-progress(3, '#ffffff', 0.25, 4)(data-percent="5" data-measure="80" data-measure-640="56")
+                .timer-item(class="relative flex-shrink-0 flex justify-center items-center w-[67px] h-[67px] 3sm:w-11 3sm:h-11")
+                  +circle-progress(3, '#ffffff', 0.25, 4)(data-percent="5" data-measure="67" data-measure-640="44")
                   .timer-item-inf(class="absolute flex flex-col items-center justify-center top-0 left-0 w-full h-full z-[1]")
                     .timer-value(class="font-primary-med text-center text-lg text-white leading-none 3sm:text-xs") 05
                     .timer-value(class="font-primary-bold text-center text-[11px] text-white/60 leading-none 3sm:hidden") секунд
-    .prsl-btn.prsl-btn-prev
-      .btn-icon
-        include ../../assets/images/icon-arrow-left.svg
-    .prsl-btn.prsl-btn-next
-      .btn-icon
-        include ../../assets/images/icon-arrow-right.svg
-    .swiper-pagination.prsl-pag
+  .swiper-pagination.prsl-pag
+  .prsl-btn.prsl-btn-prev
+    .btn-icon
+      include ../../assets/images/icon-arrow-left.svg
+  .prsl-btn.prsl-btn-next
+    .btn-icon
+      include ../../assets/images/icon-arrow-right.svg

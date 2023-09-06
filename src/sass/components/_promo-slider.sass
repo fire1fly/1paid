@@ -1,4 +1,7 @@
 .prsl
+  position: relative
+  padding-left: 132px
+  padding-right: 132px
   background: transparent url('assets/images/banner-bg-1.png') no-repeat
   background-size: cover
   background-position: top center
@@ -23,17 +26,42 @@
     .btn-icon
       width: 50%
     &-prev
-      left: 0
+      left: 32px
     &-next
-      right: 0
+      right: 32px
+  &-pag
+    display: none
 
 @media ( max-width: 1600px )
   .prsl
+    padding-left: 90px
+    padding-right: 90px
     &-btn
       width: 60px
+      &-prev
+        left: 20px
+      &-next
+        right: 20px
 
 @media ( max-width: 640px )
   .prsl
+    padding-left: 12px
+    padding-right: 12px
     &-btn
-      width: 40px
-      height: 40px
+      display: none
+    &-pag
+      position: absolute
+      bottom: 10px
+      left: 50%
+      transform: translate(-50%)
+      display: flex
+      align-items: center
+      gap: 6px
+      cursor: pointer
+      &-item
+        border-radius: 50%
+        width: 6px
+        height: 6px
+        background: darken(#fff, 10%)
+        &-active
+          background: var(--color-primary-gradient-1)
