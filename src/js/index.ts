@@ -11,7 +11,7 @@ import { initSliders } from './components/sliders';
 import { scrollToTop } from './components/scrollToTop';
 
 if (__IS_DEV__) {
-  import('../pug/pages/index.pug')
+  import('../pug/pages/game-selected.pug')
 }
 
 header();
