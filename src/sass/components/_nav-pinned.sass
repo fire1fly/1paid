@@ -74,14 +74,33 @@
       &::after
         box-shadow: 0px 0px 30px 15px var(--color-primary-gradient-1)
 
+@media (max-width: 1440px)
+  .navpin
+    &-item
+      height: 40px
+      &:hover
+        .navpin-plate
+          &::after
+            box-shadow: 0px 0px 20px 10px var(--color-primary-gradient-1)
+    &-plate
+      width: 45px
+      &-icon
+        width: 25px
+        height: 25px
+      &__dots
+        &-1, &-2
+          width: 25px
+
 @media (max-width: 1200px)
   .navpin
     &-item
+      height: 50px
       background: rgba(255 255 255 / 35%)
       box-shadow: none
       &:hover
         background: rgba(255 255 255 / 55%)
     &-plate
+      width: 74px
       &__dots
         &-1, &-2
           width: 30px
