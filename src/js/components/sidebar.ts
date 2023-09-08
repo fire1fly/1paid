@@ -7,7 +7,7 @@ export function sidebar() {
     sidebarEl?.classList.toggle("_hide");
   });
 
-  if (document.documentElement.clientWidth <= 1440) {
+  if (document.documentElement.clientWidth <= 1200) {
     document.addEventListener("click", (e) => {
       const target = e.target as unknown as HTMLElement
       const sidebar = target.closest(".menu");
