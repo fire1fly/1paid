@@ -1,0 +1,9 @@
+mixin section-header(title, search)
+  .sh(class="flex justify-between items-center gap-3 flex-wrap")&attributes(attributes)
+    .sh-title
+      h2.sh-title-text(class="font-secondary-bold text-2xl text-black 2md:text-xl")= title
+      .sh-title-line(class="mt-3 rounded-full w-9 h-1 bg-gradient-primary 2md:mt-2")
+    .sh-search(class="rounded-full h-[50px] px-6 max-w-[270px] w-full flex items-center bg-[#E8EAF7]")
+      button.sh-search-icon(class="flex-shrink-0 w-4 h-4 [&_svg]:w-full text-[#B8BACF] duration-100 hover:text-black")
+        include ../../assets/images/icon-search.svg
+      input.sh-search-input(class="ml-2.5 h-full bg-transparent font-primary-med text-base text-black" placeholder="Поиск")
