@@ -12,6 +12,7 @@ import { scrollToTop } from './components/scrollToTop';
 
 if (__IS_DEV__) {
   import('../pug/pages/game-selected.pug')
+  import('../pug/pages/index.pug')
 }
 
 header();
