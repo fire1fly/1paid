@@ -1,0 +1,27 @@
+mixin game-card(item)
+  .gc(class="relative overflow-hidden rounded-lg")
+    .gc-bg(class="absolute z-[1] top-0 left-0 w-full h-full")
+      +image('game-card-bg-' + item.imgLabel + '.png', 'relative z-[1] w-full h-full object-cover object-center')
+    .gc-bg-backdrop(class='absolute top-0 left-0 z-[2] w-full h-full bg-black/75')
+    .gc-grid(class="relative z-[2] p-5")
+      .gc-icon
+        .gc-icon-pic(class="overflow-hidden rounded-full w-16 h16")
+          +image('icon-' + item.imgLabel + '.png', 'w-full h-full object-cover', item.title)
+      .gc-title(class="font-secondary-bold text-2xl text-white")= item.title
+      .gc-badges
+        if item.badges
+          .gc-badge-bar(class="flex justify-end items-start flex-wrap gap-2")
+            each badge in item.badges
+              .gc-badge(class="rounded-full py-2 px-5 h-auto inline-flex justify-center items-center font-secondary-bold text-xs text-white" class="bg-gradient-" + badge.type)= badge.label
+      .gc-vplay(class="cursor-pointer flex flex-col items-center")
+        .gc-vplay-icon(class="w-[42px] h-[42px] [&_svg]:w-full")
+          include ../../assets/images/icon-play-video.svg
+        .gc-vplay-label(class="font-secondary-bold text-center text-[10px] text-white") Video
+      .gc-tags
+        each tag in item.tags
+          a.gc-tags-item(href="#" class="font-secondary-med text-sm text-white hover:text-white/75")= tag
+      .gc-btn(class="rounded-full border border-solid border-white min-w-[160px] h-11 flex items-center justify-between bg-transparent cursor-pointer")
+        .gc-btn-label(class="flex-grow font-secondary-bold text-center text-xs text-white") Перейти
+        button.gc-btn-subbtn.btn.btn-secondary(class="flex-shrink-0 relative right-[-2px] rounded-full w-11 h-11 justify-center")
+          .btn-icon(class="text-white w-1/2 [&_svg]:w-full")
+            include ../../assets/images/icon-dots-2.svg
