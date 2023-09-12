@@ -1,0 +1,27 @@
+.ic1
+  display: grid
+  grid-template-columns: auto 1fr
+  grid-template-rows: min-content auto
+  grid-column-gap: 12px
+  grid-row-gap: 4px
+  &-icon
+    &-wrap
+      align-self: center
+      justify-self: center
+      grid-column: 1/2
+      grid-row: 1/-1
+  &-title
+    align-self: center
+    grid-column: 2/3
+    grid-row: 1/2
+  &-desc
+    grid-column: 2/3
+    grid-row: 2/3
+
+@media ( max-width: 640px )
+  .ic1
+    &-icon
+      &-wrap
+        grid-row: 1/2
+    &-desc
+      grid-column: 1/3
