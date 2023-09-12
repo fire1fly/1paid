@@ -1,0 +1,7 @@
+mixin ic1(iconSrc, isIconBorder, title, desc)
+  .ic1(class="rounded-lg p-6 bg-white 2md:p-3")
+    .ic1-icon-wrap
+      .ic1-icon(class="w-12 h-12 flex items-center justify-center 3sm:w-8 3sm:h-8" class=isIconBorder && 'rounded-full border-[2px] border-solid border-[#E2E5F4] 3sm:border-[1px]')
+        +image('icon-' + iconSrc + '.svg', 'max-w-[50%]')
+    .ic1-title(class="font-secondary-bold text-sm text-black")= title
+    .ic1-desc(class="font-secondary-med text-xs text-[#A6B1C7]")= desc
