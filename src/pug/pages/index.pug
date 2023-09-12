@@ -1,5 +1,8 @@
 extends ../layouts/main.pug
 
+block variables
+  - var isGameNotSelected = true
+
 block page
   include ../components/_promo-slider.pug
   +section-header('Каталог Warface', true)

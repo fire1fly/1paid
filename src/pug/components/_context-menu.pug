@@ -9,10 +9,14 @@
         .cm-nav(class="mt-10 3xl:mt-8 xl:mt-6")
           include ../components/_nav-pinned
     .cm-f(class="pb-10")
-      .cm-container
-        a.btn.btn-secondary(href="#" class="rounded-full h-15 justify-center 3xl:h-12")
-          .btn-text(class="font-secondary-bold text-sm text-white") Warface
-        .cm-f-bar(class="mt-3 overflow-hidden flex h-16 rounded-full border-[1px] border-solid border-[#C0C2DC59] 3xl:h-12 xl:flex-col xl:h-auto xl:rounded-xl")
+      .cm-container(class="flex flex-col items-center")
+        if isGameNotSelected
+          a(href="#" class="rounded-full border-[1px] border-solid border-[#C0C2DC59] max-w-[160px] w-full h-12 px-3 flex justify-center items-center hover:bg-slate-100 xl:max-w-none xl:h-10")
+            .btn-text(class="font-secondary-bold text-sm text-[#A1AEC8]") Выбор игры
+        else
+          a.btn.btn-secondary(href="#" class="rounded-full w-full h-15 px-3 justify-center 3xl:h-12")
+            .btn-text(class="font-secondary-bold text-sm text-white") Warface
+        .cm-f-bar(class="mt-3 overflow-hidden flex w-full h-16 rounded-full border-[1px] border-solid border-[#C0C2DC59] 3xl:h-12 xl:flex-col xl:h-auto xl:rounded-xl")
           a.cm-f-bar-item(href="#" class="h-full flex items-center gap-x-2 px-4 text-[#A1AEC8] hover:bg-slate-100 3xl:px-2 xl:h-10")
             .cm-f-bar-item-icon(class="flex-shrink-0")
               <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
