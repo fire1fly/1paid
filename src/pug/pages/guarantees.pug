@@ -1,0 +1,63 @@
+extends ../layouts/main.pug
+
+block variables
+  -
+    var grList1 = [
+      {
+        iconSrc: 'lightning-primary',
+        isIconBorder: true,
+        title: 'Моментально',
+        desc: 'Вы получите свой товар моментально, сразу после успешной оплаты.'
+      },
+      {
+        iconSrc: 'lock-primary',
+        isIconBorder: true,
+        title: 'Безопасно',
+        desc: 'Полученные нами данные о вас остаются конфиденциальны.'
+      },
+      {
+        iconSrc: 'check-primary',
+        isIconBorder: true,
+        title: 'Качественно',
+        desc: 'Мы предлагаем качественный и удобный сервис для вас'
+      },
+    ]
+    var grList2 = [
+      {
+        iconSrc: 'delivery-secondary',
+        isIconBorder: true,
+        title: 'Множество поставщиков',
+        desc: 'Сотрудничество с поставщиками увеличивает наш ассортимент и поддерживает рубрику “Случайный аккаунт”'
+      },
+      {
+        iconSrc: 'headphones-secondary',
+        isIconBorder: true,
+        title: 'Техническая поддержка',
+        desc: 'У нас работает квалифицированная техническая поддержка, которая оперативно ответит на все ваши вопросы.'
+      },
+      {
+        iconSrc: 'like-secondary',
+        isIconBorder: true,
+        title: 'Безопасная сделка',
+        desc: 'При возникновений проблем и спорных ситуаций всегда принимается справедливое решение. Мы несем ответсвенность за безопасность вашей сделки.'
+      },
+      {
+        iconSrc: 'wallet-secondary',
+        isIconBorder: true,
+        title: 'Многообразие оплаты',
+        desc: 'Мы поддерживаем множество способов оплаты, в том числе и зарубежные переводы.'
+      },
+    ]
+
+block page
+  .sgr(class="mt-5")
+    section.sgr-section
+      +section-header('Гарантии')
+      .sgr-grid(class="mt-11 grid gap-3 grid-cols-3 2md:mt-5 2md:grid-cols-2 3sm:grid-cols-1")
+        each item in grList1
+          +ic1(item.iconSrc, item.isIconBorder, item.title, item.desc)
+    section.sgr-section(class="mt-11 2md:mt-5")
+      +section-header('Все ещё не уверены?', false, false, 'secondary')
+      .sgr-grid(class="mt-11 grid gap-3 grid-cols-2 2md:mt-5 3sm:grid-cols-1")
+        each item in grList2
+          +ic1(item.iconSrc, item.isIconBorder, item.title, item.desc)
