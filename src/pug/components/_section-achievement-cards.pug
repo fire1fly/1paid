@@ -1,0 +1,6 @@
+.sac(class="mt-5")
+  +section-header('Мои достижения')
+  .sac-grid(class="mt-10 2md:mt-5")
+    +achievment-card('achievements-example', 'Не открытое достижение', 'Получить 50 лайков', true)
+    - for (var i = 1; i <= 9; i++)
+      +achievment-card('achievements-example', 'Звезда', 'Получить 50 лайков')
