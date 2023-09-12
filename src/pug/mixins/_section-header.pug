@@ -1,10 +1,10 @@
-mixin section-header(title, search)
+mixin section-header(title, search, viewBtn, lineType = 'primary')
   .sh(class="flex justify-between items-center gap-x-3 2md:flex-col-reverse 2md:items-start 2md:gap-y-5")&attributes(attributes)
     .sh-title
       h2.sh-title-text(class="font-secondary-bold text-2xl text-black 2md:text-xl")= title
-      .sh-title-line(class="mt-3 rounded-full w-9 h-1 bg-gradient-primary 2md:mt-2")
-    .sh-bar(class="flex items-center gap-2 2md:w-full")
-      if search
+      .sh-title-line(class="mt-3 rounded-full w-9 h-1 2md:mt-2" class="bg-gradient-" + lineType)
+    if search
+      .sh-bar(class="flex items-center gap-2 2md:w-full")
         .sh-search(class="rounded-full h-[50px] px-6 max-w-[270px] w-full flex items-center bg-[#E8EAF7] 2md:max-w-none 2md:flex-grow 2md:h-10 2md:px-3")
           button.sh-search-icon(class="flex-shrink-0 w-4 h-full [&_svg]:w-full flex justify-center items-center text-[#B8BACF] duration-100 hover:text-black")
             include ../../assets/images/icon-search.svg
