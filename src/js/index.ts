@@ -14,6 +14,7 @@ if (__IS_DEV__) {
   import('../pug/pages/game-selected.pug')
   import('../pug/pages/index.pug')
   import('../pug/pages/my-achievements.pug')
+  import('../pug/pages/guarantees.pug')
 }
 
 header();
