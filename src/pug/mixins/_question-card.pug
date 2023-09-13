@@ -1,0 +1,11 @@
+mixin question-card(iconName, question, answer)
+  .qc.accordion-item(class="rounded-lg bg-[#F9F9FC]")
+    .qc-h.accordion-header(class="rounded-lg p-3 flex items-center gap-3 bg-white cursor-pointer md:gap-2")
+      .qc-icon(class="flex-shrink-0 rounded-full w-[50px] h-[50px] p-2 flex items-center justify-center bg-gradient-primary xl:w-10 xl:h-10 md:w-6 md:h-6 md:p-1")
+        +image('icon-' + iconName + '.svg', 'max-w-[50%]')
+      .qc-title(class="font-secondary-bold text-lg text-[#1D222C] xl:text-base md:text-sm")= question
+      .qc-arrow(class="flex-shrink-0 ml-auto w-6 h-6 [&_svg]:w-full text-[#C5CFE4]")
+        include ../../assets/images/icon-arrow-angle-down.svg
+    .accordion-body
+      .qc-content(class="p-6 xl:p-4 md:p-3")
+        p(class="font-secondary-med text-lg text-[#1D222C] xl:text-base md:text-xs")= answer
