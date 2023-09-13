@@ -9,12 +9,14 @@ import { sidebar } from './components/sidebar';
 import { circleProgress } from './components/circleProgress';
 import { initSliders } from './components/sliders';
 import { scrollToTop } from './components/scrollToTop';
+import { faq } from './components/faq';
 
 if (__IS_DEV__) {
   import('../pug/pages/game-selected.pug')
   import('../pug/pages/index.pug')
   import('../pug/pages/my-achievements.pug')
   import('../pug/pages/guarantees.pug')
+  import('../pug/pages/faq.pug')
 }
 
 header();
@@ -24,3 +26,4 @@ mobileMenu();
 circleProgress();
 initSliders();
 scrollToTop();
+faq();
