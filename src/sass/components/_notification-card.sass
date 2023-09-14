@@ -1,0 +1,26 @@
+.nc
+  display: grid
+  grid-template-columns: min-content 1fr auto min-content
+  grid-column-gap: 12px
+  &-text, &-date
+    align-self: center
+
+@media ( max-width: 768px )
+  .nc
+    grid-template-columns: min-content 1fr min-content
+    grid-template-rows: min-content auto
+    grid-row-gap: 4px
+    grid-column-gap: 8px
+    &-icon
+      grid-column: 1/2
+      grid-row: 1/2
+    &-text
+      grid-column: 2/3
+      grid-row: 1/2
+    &-btn
+      grid-column: 3/4
+      grid-row: 1/2
+    &-date
+      grid-column: 1/-1
+      grid-row: 2/3
+      justify-self: end
