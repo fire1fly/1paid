@@ -1,0 +1,11 @@
+mixin notification-card(item)
+  .nc(class="rounded-xl p-6 bg-white xl:p-4 md:rounded-lg md:p-3 md:pb-1")
+    .nc-icon(class="rounded-full w-[50px] h-[50px] flex items-center justify-center text-white [&_svg]:max-w-[50%] bg-gradient-secondary xl:w-10 xl:h-10 md:w-7 md:h-7 md:p-1")
+      include ../../assets/images/icon-alarm.svg
+    .nc-text(class="font-secondary-bold text-lg text-[#1D222C] [&_a]:text-[#1E61EB] xl:text-base md:text-sm 2sm:text-xs" class=(item.isMore && 'overflow-hidden text-ellipsis whitespace-nowrap'))!= item.text
+    .nc-date
+      .nc-date-label(class="font-secondary-med text-xs text-[#969BA5] md:hidden") Дата
+      .nc-date-value(class="font-secondary-bold text-base text-[#1D222C] xl:text-sm md:text-[10px]")= item.datetime
+    button.nc-btn(class="rounded-full w-11 h-11 border border-solid border-black/10 flex items-center justify-center md:w-6 md:h-6" class=(item.isMore && 'hover:bg-black/5') disabled=!item.isMore)
+      .btn-icon(class="[&_svg]:w-4 md:[&_svg]:w-3" class=(item.isMore ? '[&_svg]:text-black' : '[&_svg]:text-black/10'))
+        include ../../assets/images/icon-arrow-right-2.svg
