@@ -1,0 +1,16 @@
+mixin history-view-card(title, desc, date)
+  .hvc(class="rounded-xl p-6 bg-white xl:p-4 md:rounded-lg 2md:p-3")
+    .hvc-icon(class="rounded-full w-[50px] h-[50px] flex justify-center items-center [&_svg]:max-w-[50%] text-black bg-[#F0F1F5] xl:w-10 xl:h-10 md:w-7 md:h-7 md:p-1 md:[&_svg]:max-w-[70%]")
+      include ../../assets/images/icon-eye.svg
+    .hvc-title(class="font-secondary-bold text-lg text-[#1D222C] xl:text-base md:text-sm 2sm:text-xs")= title
+    .hvc-ibar(class="flex items-center gap-4 2md:gap-2 md:flex-wrap")
+      .hvc-ibar-item
+        .hvc-ibar-label(class="font-secondary-med text-sm text-[#969BA5] xl:text-xs md:text-[10px]") Краткая информация
+        .hvc-ibar-value(class="font-secondary-bold text-base text-[#1D222C] xl:text-sm md:text-xs")= desc
+      .hvc-ibar-sep(class="flex-shrink-0  w-[1px] h-[50px] bg-[#DBE0ED] opacity-60 md:hidden")
+      .hvc-ibar-item
+        .hvc-ibar-label(class="font-secondary-med text-sm text-[#969BA5] xl:text-xs md:text-[10px]") Дата просмотра
+        .hvc-ibar-value(class="font-secondary-bold text-base text-[#1D222C] xl:text-sm md:text-xs")= date
+    button.hvc-btn(class="rounded-full w-11 h-11 border border-solid border-black/10 flex items-center justify-center hover:bg-black/5 md:w-8 md:h-8")
+      .btn-icon(class="[&_svg]:w-4 md:[&_svg]:w-4 [&_svg]:text-black")
+        include ../../assets/images/icon-arrow-right-2.svg
