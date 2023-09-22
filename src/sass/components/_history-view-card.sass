@@ -1,0 +1,33 @@
+.hvc
+  display: grid
+  grid-template-columns: min-content 1fr auto min-content
+  gap: 16px
+  &-icon
+    align-self: center
+  &-title
+    align-self: center
+  &-ibar
+    align-self: center
+  &-btn
+    align-self: center
+
+@media ( max-width: 991px )
+  .hvc
+    gap: 8px
+
+@media ( max-width: 768px )
+  .hvc
+    grid-template-columns: min-content 1fr min-content
+    gap: 8px
+    &-icon
+      grid-column: 1/2
+      grid-row: 1/2
+    &-title
+      grid-column: 2/3
+      grid-row: 1/2
+    &-ibar
+      grid-column: 1/3
+      grid-row: 2/3
+    &-btn
+      grid-column: 3/4
+      grid-row: 1/3
