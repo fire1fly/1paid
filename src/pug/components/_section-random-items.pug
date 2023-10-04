@@ -1,0 +1,19 @@
+-
+  var randomItemsList = [
+    {colorType: 'pink',type: 'Рулетка',title: 'rose',attachColor: 'primary',value: '1990₽'},
+    {colorType: 'pink',type: 'Рулетка',title: 'rose',attachColor: 'primary',value: '1990₽'},
+    {colorType: 'pink',type: 'Рулетка',title: 'rose',attachColor: 'primary',value: '1990₽'},
+    {colorType: 'blue',type: 'Рулетка',title: 'farm',attachColor: 'secondary',value: '1990₽'},
+    {colorType: 'blue',type: 'Рулетка',title: 'farm',attachColor: 'secondary',value: '1990₽'},
+    {colorType: 'blue',type: 'Рулетка',title: 'farm',attachColor: 'secondary',value: '1990₽'},
+    {colorType: 'gold',type: 'Рулетка',title: 'yello',attachColor: 'primary',value: '1990₽', extraValue: '1990PD', discount: '15%'},
+    {colorType: 'gold',type: 'Рулетка',title: 'yello',attachColor: 'primary',value: '1990₽', extraValue: '1990PD', discount: '15%'},
+    {colorType: 'gold',type: 'Рулетка',title: 'yello',attachColor: 'primary',value: '1990₽', extraValue: '1990PD', discount: '15%'},
+  ]
+
+.sri
+  +section-header('Случайные предметы')(class="mt-11 2md:mt-5")
+  .sri-grid(class="mt-11 grid grid-cols-3 gap-3 2md:grid-cols-2 2md:mt-5 2md:pb-2 2sm:grid-cols-1")
+    each item in randomItemsList
+      +case-card(item.colorType, item.type, item.title, item.attachColor, item.value, item.extraValue, item.discount)(class="flex-grow 2md:flex-shrink-0 2md:min-w-[300px] 3sm:min-w-[200px]")
+
