@@ -1,8 +1,8 @@
-mixin product-card-grid(count, cols)
+mixin product-card-grid(items, cols)
   .pcg&attributes(attributes)
     .pcg-grid(class="grid gap-3 3sm:gap-1.5" class=cols)
-      - for(var i = 0; i < count; i++)
-        +product-card
+      each item in items
+        +product-card(item.type, item.isEditable, item.isActive, item.title, item.description, item.details, item.source)
     .pcg-f(class="mt-6 3sm:mt-3 flex justify-center")
       a.btn.btn-primary.pcg-f-btn(class="rounded-full max-w-[180px] w-full h-12 px-2 justify-center")
         .btn-text(class="font-primary-bold text-xs text-white uppercase") Подробнее
