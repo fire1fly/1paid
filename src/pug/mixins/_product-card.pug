@@ -1,58 +1,76 @@
-mixin product-card
+mixin product-card(type, isEditable, isActive, title, description, details, source)
   .pc(class="rounded-lg bg-white")
-    .pc-plate-container
-      .pc-plate(class="bg-gradient-primary _shadow-primary py-1 px-6 3sm:px-2 3sm:py-[1px]") new
-      .pc-plate(class="bg-gradient-secondary _shadow-secondary py-1 px-6 3sm:px-2 3sm:py-[1px]") 3 дня гарантия
+    if (type === "product" && isActive)
+      .pc-plate-container
+        .pc-plate(class="bg-gradient-primary _shadow-primary py-1 px-6 3sm:px-2 3sm:py-[1px]") new
+        .pc-plate(class="bg-gradient-secondary _shadow-secondary py-1 px-6 3sm:px-2 3sm:py-[1px]") 3 дня гарантия
     .pc-supinfo(class="font-secondary-bold text-[13px] text-black 3sm:text-xs")
-      .pc-rating(class="flex gap-1 items-center")
-        .pc-rating-icon(class="flex-shrink-0 w-[22px] h-[22px] [&_svg]:w-full 3sm:w-4 3sm:h-4")
-          include ../../assets/images/icon-star-yellow.svg
-        span 4.8
-      //- .pc-id #23141
+      if (type === "product")
+        .pc-rating(class="flex gap-1 items-center")
+          .pc-rating-icon(class="flex-shrink-0 w-[22px] h-[22px] [&_svg]:w-full 3sm:w-4 3sm:h-4")
+            include ../../assets/images/icon-star-yellow.svg
+          span 4.8
+      if (type === "history")
+        .pc-id #23141
     .pc-ibar(class="flex justify-end items-center flex-wrap gap-3")
-      //- button.pc-btn-edit
+      if (isEditable)
+        button.pc-btn-edit
+          .btn-icon
+            include ../../assets/images/icon-edit.svg
+      label.pc-btn-like
+        input(type="checkbox")
         .btn-icon
-          include ../../assets/images/icon-edit.svg
-      button.pc-btn-like
-        .btn-icon._default
-          include ../../assets/images/icon-like-outline.svg
-        //- .btn-icon._checked
-          include ../../assets/images/icon-like-fill.svg
-      //- button.pc-btn-remove
-        .btn-icon
-          include ../../assets/images/icon-close.svg
-    .pc-preview(class="flex justify-center items-center")
+          <svg class="_default" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.00689 10.4136L11.0819 15.0674V15.0674L16.1568 10.4136V10.4136L19.0394 7.77019C20.4408 6.48508 20.4408 4.4015 19.0394 3.11639C17.638 1.83128 15.3659 1.83128 13.9644 3.11639L11.0819 5.77836L8.19927 3.135C6.79786 1.84989 4.52572 1.84989 3.1243 3.135C1.72289 4.42012 1.72289 6.50369 3.1243 7.78881L6.00689 10.4136ZM12.5024 1.82265C14.6914 -0.184698 18.2405 -0.184698 20.4295 1.82265C22.6185 3.82999 22.6185 7.08454 20.4295 9.09189L18.9882 10.4136V10.4136L11.0814 17.6828V17.6828L3.15434 10.4136V10.4136L1.71305 9.09189C-0.475963 7.08454 -0.475963 3.82999 1.71305 1.82265C3.90205 -0.184698 7.45114 -0.184698 9.64015 1.82265L11.0814 3.14433L12.5024 1.82265Z" fill="currentColor"/>
+          </svg>
+          <svg class="_checked" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5717 1.5605C14.7284 -0.520167 18.2251 -0.520167 20.3817 1.5605C22.5384 3.64117 22.5384 7.0146 20.3817 9.09527L18.9617 10.4652L11.1717 18L3.36172 10.4652L1.94172 9.09527C-0.214949 7.0146 -0.214949 3.64117 1.94172 1.5605C4.09839 -0.520167 7.59505 -0.520167 9.75172 1.5605L11.1717 2.93046L12.5717 1.5605Z" fill="currentColor"/>
+          </svg>
+      if (isEditable)
+        button.pc-btn-remove
+          .btn-icon
+            include ../../assets/images/icon-close.svg
+    .pc-preview(class="flex justify-center items-center" class=(!isActive && "opacity-50"))
       .pc-preview-inner(class="max-w-[120px] w-full h-[120px] 3sm:max-w-[80px] 3sm:max-h-[80px]")
         +image('product-preview-1.png', 'pc-preview-pic w-full')
     .pc-info
-      .pc-title(class="font-secondary-bold text-[13px] text-black 3sm:text-[12px]") Makmilan Gr-23
-      .pc-subtitle(class="mt-1 font-secondary-med text-xs text-[#A6B1C7] 3sm:text-[10px]") Оружие в идеальном состоянии, прямо из завода.
+      .pc-title(class="font-secondary-bold text-[13px] text-black 3sm:text-[12px]" class=(!isActive && "opacity-30"))= title
+      .pc-subtitle(class="mt-1 font-secondary-med text-xs text-[#A6B1C7] 3sm:text-[10px]")= description
     .pc-subinfo(class="text-[#BEC1DB] flex flex-col gap-2 3sm:gap-1")
-      .pc-subinfo-value(class="font-secondary-med text-[10px]") Тип: Оружие
-      .pc-subinfo-value(class="font-secondary-med text-[10px]") Кол: 33
-      .pc-subinfo-value(class="font-secondary-med text-[10px]") Продажа от: 33 шт
-      .pc-subinfo-value(class="font-secondary-med text-[10px]") Срок: Навсегда
+      if (details.length === 0)
+        .pc-subinfo-value(class="font-secondary-med text-[10px]") Описание товара отстутствует
+      else
+        each item in details
+          .pc-subinfo-value(class="font-secondary-med text-[10px]") #{item.label}: #{item.value}
     .pc-tbar
       .pc-tbar-inner(class="flex items-center gap-3 3sm:gap-1.5 3sm:flex-col 3sm:items-start")
         .pc-source(class="flex-shrink-0 w-11 h-11 3sm:w-8 3sm:h-8")
-          .pc-source-user(class="w-full h-full relative")
-            .pc-source-status._green
-            +image('avatar-example-3.png', 'w-full h-full object-cover object-center')
-          //- .pc-source-admin(class="relative rounded-full w-full h-full flex items-center justify-center bg-[#2460EC]")
-            .pc-source-admin-icon(class="w-[55%] text-white")
-              include ../../assets/images/icon-headphones.svg
-            .pc-source-status._green
-          //- .pc-source-case(class="relative rounded-full w-full h-full flex items-center justify-center")
-            +image('case-blue.png', 'w-full object-cover object-center')
+          if (source === 'user')
+            .pc-source-user(class="w-full h-full relative")
+              .pc-source-status._green
+              +image('avatar-example-3.png', 'w-full h-full object-cover object-center')
+          if (source === 'admin')
+            .pc-source-admin(class="relative rounded-full w-full h-full flex items-center justify-center bg-[#2460EC]")
+              .pc-source-admin-icon(class="w-[55%] text-white")
+                include ../../assets/images/icon-headphones.svg
+              .pc-source-status._green
+          if (source === 'case')
+            .pc-source-case(class="relative rounded-full w-full h-full flex items-center justify-center")
+              +image('case-blue.png', 'w-full object-cover object-center')
         .pc-total(class="flex-grow h-11 rounded-full border border-solid border-[#F3F7FF] flex items-center justify-between pl-4 gap-2 3sm:h-10 3sm:pl-3 3sm:w-full")
           .pc-total-inf(class="flex flex-wrap gap-x-[5px] font-secondary-bold text-xs 3sm:text-[10px]")
-            span(class="text-[#BEC1DB]") Цена
+            if (isActive)
+              span(class="text-[#BEC1DB]") Цена
+            else
+              span(class="text-[#83b945]") Куплен
             span(class="text-[#83b945]") 120.00 <b>₽</b>
           .pc-total-btn-wrap(class="flex-shrink-0 w-11 h-11 3sm:w-10 3sm:h-10")
-            //- a.btn.btn-primary.pc-total-btn(href="#" class="rounded-full w-full h-full justify-center")
-              .btn-icon(class="w-1/2 [&_svg]:w-full text-white")
-                include ../../assets/images/icon-chat-message.svg
-            a.btn.btn-secondary.pc-total-btn(href="#" class="rounded-full w-full h-full justify-center")
-              .btn-icon(class="w-1/2 [&_svg]:w-full text-white")
-                include ../../assets/images/icon-shopping-cart-3.svg
+            if (type === "product")
+              a.btn.btn-secondary.pc-total-btn(href="#" class="rounded-full w-full h-full justify-center")
+                .btn-icon(class="w-1/2 [&_svg]:w-full text-white")
+                  include ../../assets/images/icon-shopping-cart-3.svg
+            if (type === "history")
+              a.btn.btn-primary.pc-total-btn(href="#" class="rounded-full w-full h-full justify-center")
+                .btn-icon(class="w-1/2 [&_svg]:w-full text-white")
+                  include ../../assets/images/icon-chat-message.svg
 
