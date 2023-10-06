@@ -1,0 +1,88 @@
+-
+  var newProductsList = [
+    {
+      type: 'history',
+      isEditable: false,
+      isActive: true,
+      title: 'Аккаунт Warface',
+      details: [],
+      source: 'case',
+      plates: []
+    },
+    {
+      type: 'product',
+      isEditable: false,
+      isActive: true,
+      title: 'Аккаунт Warface',
+      description: 'Оружие в идеальном состоянии, прямо из завода.',
+      details: [{label: 'Сервер', value: 'ru.warface.com'},{label: 'Донат', value: '33'},{label: 'Ранг', value: '25'},{label: 'Тип', value: 'Перепродажа'}],
+      source: 'user',
+      plates: [{type: 'primary', value: 'new'}]
+    },
+    {
+      type: 'product',
+      isEditable: false,
+      isActive: true,
+      title: 'Аккаунт Warface',
+      description: 'Оружие в идеальном состоянии, прямо из завода.',
+      details: [{label: 'Сервер', value: 'ru.warface.com'},{label: 'Донат', value: '33'},{label: 'Ранг', value: '25'},{label: 'Тип', value: 'Перепродажа'}],
+      source: 'user',
+      plates: [{type: 'primary', value: 'new'}]
+    },
+    {
+      type: 'product',
+      isEditable: false,
+      isActive: true,
+      title: 'Аккаунт Warface',
+      description: 'Оружие в идеальном состоянии, прямо из завода.',
+      details: [{label: 'Сервер', value: 'ru.warface.com'},{label: 'Донат', value: '33'},{label: 'Ранг', value: '25'},{label: 'Тип', value: 'Перепродажа'}],
+      source: 'user',
+      plates: []
+    },
+    {
+      type: 'product',
+      isEditable: false,
+      isActive: true,
+      title: 'Аккаунт Warface',
+      description: 'Оружие в идеальном состоянии, прямо из завода.',
+      details: [{label: 'Сервер', value: 'ru.warface.com'},{label: 'Донат', value: '33'},{label: 'Ранг', value: '25'},{label: 'Тип', value: 'Перепродажа'}],
+      source: 'user',
+      plates: []
+    },
+    {
+      type: 'product',
+      isEditable: false,
+      isActive: true,
+      title: 'Аккаунт Warface',
+      description: 'Оружие в идеальном состоянии, прямо из завода.',
+      details: [{label: 'Сервер', value: 'ru.warface.com'},{label: 'Донат', value: '33'},{label: 'Ранг', value: '25'},{label: 'Тип', value: 'Перепродажа'}],
+      source: 'user',
+      plates: []
+    },
+    {
+      type: 'product',
+      isEditable: false,
+      isActive: false,
+      title: 'Аккаунт Warface',
+      description: 'Оружие в идеальном состоянии, прямо из завода.',
+      details: [{label: 'Сервер', value: 'ru.warface.com'},{label: 'Донат', value: '33'},{label: 'Ранг', value: '25'},{label: 'Тип', value: 'Перепродажа'}],
+      source: 'user',
+      plates: [{type: 'primary', value: 'new'}]
+    },
+    {
+      type: 'product',
+      isEditable: false,
+      isActive: true,
+      title: 'Аккаунт Warface',
+      description: 'Оружие в идеальном состоянии, прямо из завода.',
+      details: [{label: 'Сервер', value: 'ru.warface.com'},{label: 'Донат', value: '33'},{label: 'Ранг', value: '25'},{label: 'Тип', value: 'Перепродажа'}],
+      source: 'user',
+      plates: [{type: 'primary', value: 'new'}]
+    },
+  ]
+
+
+.sbm(class="mt-11 2md:mt-5")
+  +section-header('Мои закладки', true, true)(class="snp-title")
+  +product-card-grid(newProductsList, 'grid-cols-4 2lg:grid-cols-3 2md:grid-cols-2')(class="mt-11 2md:mt-5")
+  include ../components/_pagination.pug
