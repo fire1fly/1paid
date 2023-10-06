@@ -45,7 +45,7 @@ mixin product-card(type, isEditable, isActive, title, description, details, sour
           .pc-subinfo-value(class="font-secondary-med text-[10px]") #{item.label}: #{item.value}
     .pc-tbar
       .pc-tbar-inner(class="flex items-center gap-3 3sm:gap-1.5 3sm:items-start")
-        .pc-source(class="flex-shrink-0 w-11 h-11 3sm:w-8 3sm:h-8")
+        .pc-source(class="flex-shrink-0 w-11 h-11 3sm:w-10 3sm:h-10")
           if (source === 'user')
             .pc-source-user(class="w-full h-full relative")
               .pc-source-status._green
