@@ -10,6 +10,7 @@ import { circleProgress } from './components/circleProgress';
 import { initSliders } from './components/sliders';
 import { scrollToTop } from './components/scrollToTop';
 import { faq } from './components/faq';
+import { productView } from './components/productView';
 
 if (__IS_DEV__) {
   // import('../pug/pages/game-selected.pug')
@@ -28,3 +29,4 @@ circleProgress();
 initSliders();
 scrollToTop();
 faq();
+productView();
