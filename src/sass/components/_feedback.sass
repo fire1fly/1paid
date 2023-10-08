@@ -1,0 +1,58 @@
+.sfb
+  &-form
+    &-input
+      &._active
+        height: 270px
+  &-btn
+    &-open
+      display: none
+    &-submit
+      &._active
+        +gradient-primary
+        color: #fff
+
+@media ( max-width: 991px )
+  .sfb
+    &-form
+      position: fixed
+      top: 0
+      left: 0
+      z-index: 20
+      border-radius: 0
+      width: 100%
+      height: 100%
+      padding: 16px
+      display: flex
+      flex-direction: column
+      z-index: -1
+      opacity: 0
+      visibility: visible
+      transition: 0.3s
+      &._active
+        z-index: 20
+        visibility: visible
+        opacity: 1
+      &-h
+        flex-shrink: 0
+      &-b
+        flex-grow: 1
+      &-field
+        height: 100%
+        display: flex
+        flex-direction: column
+      &-input
+        &._active
+          height: auto
+          flex-grow: 1
+      &-f
+        margin-top: 16px
+        flex-shrink: 0
+    &-btn
+      &-open
+        position: fixed
+        z-index: 10
+        bottom: 16px
+        left: 50%
+        transform: translateX(-50%)
+        width: calc(100% - 32px)
+        display: flex
