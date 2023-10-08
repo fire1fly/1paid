@@ -11,6 +11,8 @@ import { initSliders } from './components/sliders';
 import { scrollToTop } from './components/scrollToTop';
 import { faq } from './components/faq';
 import { productView } from './components/productView';
+import { feedbackForm } from './components/feedbackForm';
+import { alerts } from './components/alerts';
 
 if (__IS_DEV__) {
   // import('../pug/pages/game-selected.pug')
@@ -25,8 +27,10 @@ header();
 sidebar();
 liveFeed();
 mobileMenu();
-circleProgress();
+alerts();
 initSliders();
 scrollToTop();
+circleProgress();
 faq();
 productView();
+feedbackForm();
