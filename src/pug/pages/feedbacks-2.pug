@@ -1,0 +1,13 @@
+extends ../layouts/main.pug
+
+block variables
+  -
+    var feedbackForm = 'default'
+
+block page
+  include ../components/_section-feedbacks.pug
+
+block portals
+  .alert-wrapper(class="fixed top-[120px] right-0 z-[8] pr-9 grid grid-cols-1 gap-3 lg:top-[85px] lg:pr-4")
+    .alert(class="rounded-[12px] p-3 flex gap-3 bg-[#0F0F0F]/60 cursor-pointer md:p-2")
+      .alert-text(class="font-secondary-bold text-sm text-white md:text-xs") Отзыв успешно опубликован
