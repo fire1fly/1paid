@@ -41,7 +41,7 @@
 .sfb(class="mt-11 2md:mt-5")
   +section-header('Отзывы')(class="sfb-title")
   .sfb-total(class="mt-5 font-secondary-bold text-lg text-black/20 md:mt-4 md:text-sm") Количество отзывов:  753
-  .sfb-inner(class="mt-4 flex gap-3 md:mt-3")
+  .sfb-inner(class="mt-4 flex gap-3 2md:block 2md:gap-0 md:mt-3")
     .sfb-feed(class="flex-grow grid grid-cols-1 gap-3")
       each item in feedbacksList
         +feedback-card(item.username, item.avatar, item.date, item.text)
