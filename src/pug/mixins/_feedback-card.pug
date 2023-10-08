@@ -1,0 +1,9 @@
+mixin feedback-card(username, avatar, date, text)
+  .fbc(class="rounded-xl p-6 flex items-start gap-4 bg-white md:block")
+    .fbc-info(class="flex-shrink-0 flex gap-3 md:float-left md:mr-3 md:gap-1")
+      .fbc-avatar(class="flex-shrink-0 rounded-full w-[50px] h-[50px] overflow-hidden xl:w-10 xl:h-10 md:w-8 md:h-8")
+        +image(avatar, 'fbc-avatar-pic w-full h-full object-cover', 'user')
+      .fbc-info-inner
+        .fbc-username(class="font-secondary-bold text-lg text-[#1D222C] xl:text-base md:text-sm")= username
+        .fbc-date(class="font-secondary-med text-xs text-[#CDCFE5] xl:text-[10px]")= date
+    .fbc-text(class="flex-grow border-l border-solid border-[#E7EAF3] pl-4 font-secondary-med text-[10px] text-[#595E72] md:border-l-0 md:pl-0 ")= text
